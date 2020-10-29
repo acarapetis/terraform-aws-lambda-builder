@@ -18,6 +18,11 @@ output "environment" {
   value       = var.enabled ? aws_lambda_function.built[0].environment : null
 }
 
+output "function" {
+  description = "Your Lambda Function as a aws_lambda_function resource."
+  value       = var.enabled ? aws_lambda_function.built[0] : null
+}
+
 output "function_name" {
   description = "The unique name for your Lambda Function."
   value       = var.enabled ? aws_lambda_function.built[0].function_name : null
